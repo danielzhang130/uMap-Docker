@@ -52,25 +52,8 @@ COMPRESS_OFFLINE = True
 LANGUAGE_CODE = 'en'
 
 AUTHENTICATION_BACKENDS = (
-    # 'cartes.oauth.DataGouvOAuth2',
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.bitbucket.BitbucketOAuth',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.openstreetmap.OpenStreetMapOAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
-SOCIAL_AUTH_GITHUB_KEY = '93761405c92b3562d0a3'
-SOCIAL_AUTH_GITHUB_SECRET = '78077fdfab87244e4a890e5122c1334f4a3676e7'
-SOCIAL_AUTH_BITBUCKET_KEY = 'bEXgD8EbgcLAs5umqN'
-SOCIAL_AUTH_BITBUCKET_SECRET = 'bwh9Gt6fFM4JYR43xUsnssggFu4Fk7b8'
-# We need email to associate with other Oauth providers
-SOCIAL_AUTH_GITHUB_SCOPE = ["user:email", ]
-SOCIAL_AUTH_TWITTER_KEY = "SJqnyRApuIeE7O1vLzxUUg"
-SOCIAL_AUTH_TWITTER_SECRET = "h8gUUPwtRGcIu2UDXqjue4IMGDUHDjXrjVXUGOfLPY"
-SOCIAL_AUTH_OPENSTREETMAP_KEY = 'LabT8mJNrgQ7yyE2HlNsS862ks7Cth4wADfE0546'
-SOCIAL_AUTH_OPENSTREETMAP_SECRET = '6mhPOh6WxvFDou7lTVkQKmwEsquuePX022JdsC1s'
-SOCIAL_AUTH_DATAGOUV_SECRET = "10042c1ab03e26a27521105ff115daf99fd78ec75720cca1"
-SOCIAL_AUTH_DATAGOUV_KEY = "5771417e06eb3a4108ab1a29"
 MIDDLEWARE += (
     'social_django.middleware.SocialAuthExceptionMiddleware',
 )
