@@ -1,0 +1,10 @@
+version: '3'
+services:
+    web:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - /var/www/html/static:/srv/umap/static
+            - ./uploads:/srv/umap/uploads
+            - ./settings.py:/srv/umap/settings.py
